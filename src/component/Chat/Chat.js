@@ -4,7 +4,7 @@ import socketIO from "socket.io-client";
 import "../Chat/Chat.css";
 import Message from "../Message/Message";
 import ReactScrollToBottom from "react-scroll-to-bottom";
-
+import closeicon from "../../images/closeicon.png";
 let socket;
 const ENDPOINT = "http://localhost:4500/";
 
@@ -62,7 +62,13 @@ const Chat = () => {
   return (
     <div className="chatpage">
       <div className="chatContainer">
-        <div className="header"> </div>
+        <div className="header">
+          <h3>CHAT.IO</h3>
+          <a href="/">
+            {" "}
+            <img src={closeicon} alt="Close"></img>
+          </a>
+        </div>
         <ReactScrollToBottom className="chatbox">
           {messages.map((item, i) => (
             <Message

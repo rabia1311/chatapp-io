@@ -16,15 +16,36 @@
 .header{
     background-color: plum;
     height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+
+
+.header>h3{
+    color: white;
+    margin: 1.5vmax;
+}
+
+.header>a>img{
+     width: 3%;
+     margin: 2.5vmax; 
+     transition: all 0.4s;
+}
+.header>img:hover{
+    transform: scale(1.2);
+}
+
+
 .chatbox{
-border: 0.2vmax solid black;
+
 height: 70%;
 box-sizing: border-box;
 
 }
 .inputbox{
-    border: 0.2vmax solid black;
+    border-top: 0.2vmax solid black;
     height: 15%;
     box-sizing: border-box;
     display: flex;
@@ -37,6 +58,7 @@ background-color: white;
 padding: 2vmax;
 box-sizing: border-box;
 outline: none;
+border-top: 0.2vmax solid black;
 
 }
 .sendbtn{
