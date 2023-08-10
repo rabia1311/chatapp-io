@@ -32,8 +32,15 @@ io.on("connection", (socket) => {
     });
   });
 
+  socket.on("message", ({ message, id }) => {
+    io.emit("sendMessage", { user: users[id], message, id });
+  });
+
   socket.on("disconnect", () => {
-    socket.broadcast.emit("leave", { user: "Admin", message: "User has left" });
+    socket.broadcast.emit("leave", {
+      user: "Admin",
+      message: ` ${users[socket.id]} has left`,
+    });
     console.log("User has left ");
   });
 });
