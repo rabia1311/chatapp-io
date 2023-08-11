@@ -81,5 +81,23 @@ body{
         height: 10% !important;
         
     }
+    #chatinput{
+      
+        padding: 4vw !important;
+       font-size: 4vw !important;
+        
+        }
+        .sendbtn{
+           
+        }
+        .messagebox{
+   
+            width: 70% !important;
+            padding: 3vw !important;
+            margin: 3vw !important;
+            border-radius: 1.5vw !important;
+            display: inline-block;
+            font-size: 3.7vw !important;
+        }
     
 }
